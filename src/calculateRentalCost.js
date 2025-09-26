@@ -17,6 +17,8 @@ function calculateRentalCost(days) {
     return baseCost - shortTermDiscount;
   } else if (days >= longTermThreshold) {
     return baseCost - longTermDiscount;
+  } else {
+    return 'The days must be a positive integer';
   }
 }
 
