@@ -13,13 +13,16 @@ function calculateRentalCost(days) {
 
   if (days >= 0 && days < shortTermThreshold) {
     return baseCost;
-  } else if (days >= shortTermThreshold && days < longTermThreshold) {
+  }
+
+  if (days >= shortTermThreshold && days < longTermThreshold) {
     return baseCost - shortTermDiscount;
-  } else if (days >= longTermThreshold) {
+  }
+
+  if (days >= longTermThreshold) {
     return baseCost - longTermDiscount;
-  } else {
-    return 'The days must be a positive integer';
   }
 }
 
-module.exports = calculateRentalCost;
+  module.exports = calculateRentalCost;
+
